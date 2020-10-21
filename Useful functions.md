@@ -1,4 +1,6 @@
 **EXPLORATORY DATA ANALYSIS**
+
+```python
 def eda(data):
     print("----------Top-5- Record----------")
     print(data.head(5))
@@ -12,14 +14,18 @@ def eda(data):
     print(data.isna().sum())
     print("----------Shape of Data----------")
     print(data.shape)
+```
 
 **DISTRIBUTIONS**
+```python
 def graph_insight(data):
     print(set(data.dtypes.tolist()))
     df_num = data.select_dtypes(include = ['float64', 'int64'])
     df_num.hist(figsize=(16, 16), bins=50, xlabelsize=8, ylabelsize=8);
+```
     
 **DROP DUPLICATES**
+```python
 def drop_duplicate(data, subset):
     print('Before drop shape:', data.shape)
     before = data.shape[0]
@@ -28,4 +34,5 @@ def drop_duplicate(data, subset):
     print('After drop shape:', data.shape)
     after = data.shape[0]
     print('Total Duplicate:', before-after)
+```
 
