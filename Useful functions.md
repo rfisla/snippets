@@ -35,4 +35,11 @@ def drop_duplicate(data, subset):
     after = data.shape[0]
     print('Total Duplicate:', before-after)
 ```
-
+**LOOKING FOR OUTLIERS**
+```python
+def unresanable_data(data):
+    print("Min Value:",data.min())
+    print("Max Value:",data.max())
+    print("Average Value:",data.mean())
+    print("Center Point of Data:",data.median())
+```
